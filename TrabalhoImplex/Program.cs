@@ -20,7 +20,7 @@ namespace TrabalhoImplex
             int tamanho = 10;
             int inicio = numeros[0];
             int fim = numeros[tamanho - 1];
-
+            /*Qualquer opção que seja diferente dos apontados acima trará os quatro tipos de vetores*/
 
             tipoVetor = Console.ReadLine();
             if (tipoVetor == "1")
@@ -88,9 +88,11 @@ namespace TrabalhoImplex
 
                 for (int i = 0; i < 5; i++)
                 {
-                    TipoArray.VetorRandomico(numeros, random, inicio, fim, tamanho);
+                    TipoArray.VetorRandomico(numeros, random, inicio, fim, tamanho);                                      
                     Temporizador.ImprimirTemporizador(numeros);
+                    
                 }
+                Console.WriteLine();
 
                 Console.WriteLine("[ [REVERSE] ]");
                 Console.WriteLine();
@@ -102,6 +104,7 @@ namespace TrabalhoImplex
                     TipoArray.VetorReverso(numeros, inicio, fim, tamanho);
                     Temporizador.ImprimirTemporizador(numeros);
                 }
+                Console.WriteLine();
 
                 Console.WriteLine("[ [SORTED] ]");
                 Console.WriteLine();
@@ -113,6 +116,7 @@ namespace TrabalhoImplex
                     TipoArray.VetorOrdenado(numeros, inicio, fim);
                     Temporizador.ImprimirTemporizador(numeros);
                 }
+                Console.WriteLine();
 
                 Console.WriteLine("[ [NEARLY SORTED] ]");
                 Console.WriteLine();
@@ -123,6 +127,7 @@ namespace TrabalhoImplex
                     TipoArray.VetorQuaseOrdenado(numeros, inicio, fim);
                     Temporizador.ImprimirTemporizador(numeros);
                 }
+                Console.WriteLine();
             }
         }
     }

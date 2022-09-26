@@ -11,6 +11,7 @@ namespace TrabalhoImplex
             {
                 //gera numero aleatório dentro de um intervalo diferente de 10 em 10
                 numeros[i] = random.Next(inicio, fim);
+                //o Take define a quantidade de numeros e o skip o espaço que será ignorado
                 numeros.Take(10).Skip(10);
             }
         }
