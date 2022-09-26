@@ -12,12 +12,12 @@ namespace TrabalhoImplex
             int[] numeros = new int[10];
             Random random = new Random();
             Temporizador temp = new Temporizador();
-            int l = numeros[0];
-            int r = numeros[10 - 1];
-            int n = numeros.Length;
+            int tamanho = 10;
+            int inicio = numeros[0];
+            int fim = numeros[tamanho - 1];
             
-
-            TipoArray.VetorRandomico(numeros, random, 0, 10, 10);
+            
+            
             Console.WriteLine("[ [RANDOM] ]");
             Console.WriteLine();
             Console.WriteLine("n\t Bubble\t Selection\tInsertion\t Merge\tHeap\tQuick\tCounting\tRadix\tBucket");
@@ -25,7 +25,7 @@ namespace TrabalhoImplex
 
             for (int i = 0; i < 5; i++)
             {
-                TipoArray.VetorRandomico(numeros, random, 0, 10, 10);
+                TipoArray.VetorRandomico(numeros, random, inicio, fim, tamanho);
                 Temporizador.ImprimirTemporizador(numeros);
             }
 
@@ -34,23 +34,33 @@ namespace TrabalhoImplex
             Console.WriteLine("n\t Bubble\t Selection\tInsertion\t Merge\tHeap\tQuick\tCounting\tRadix\tBucket");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
             
-            TipoArray.VetorReverso(numeros, 0, 10, 10);
+            for (int i = 0; i < 5; i++)
+            {
+                TipoArray.VetorReverso(numeros, inicio, fim, tamanho);
             Temporizador.ImprimirTemporizador(numeros);
+            }
 
             Console.WriteLine("[ [SORTED] ]");
             Console.WriteLine();
             Console.WriteLine("n\t Bubble\t Selection\tInsertion\t Merge\tHeap\tQuick\tCounting\tRadix\tBucket");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
 
-            TipoArray.VetorOrdenado(numeros, 0, 10);
-            Temporizador.ImprimirTemporizador(numeros);
+            for (int i = 0; i < 5; i++)
+            {
+                TipoArray.VetorOrdenado(numeros, inicio, fim);
+                Temporizador.ImprimirTemporizador(numeros);
+            }
 
             Console.WriteLine("[ [NEARLY SORTED] ]");
             Console.WriteLine();
             Console.WriteLine("n\t Bubble\t Selection\tInsertion\t Merge\tHeap\tQuick\tCounting\tRadix\tBucket");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------");
+            for (int i = 0; i < 5; i++)
+            {
+                TipoArray.VetorQuaseOrdenado(numeros, inicio, fim);
+                Temporizador.ImprimirTemporizador(numeros);
+            }
 
-            
         }
 
     }
