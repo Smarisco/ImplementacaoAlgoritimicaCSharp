@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace TrabalhoImplex
 {
@@ -8,8 +9,9 @@ namespace TrabalhoImplex
         {
             for (int i = 0; i < tamanho; i++)
             {
-                //gera numero aleatório dentro de um intervalo diferente
+                //gera numero aleatório dentro de um intervalo diferente de 10 em 10
                 numeros[i] = random.Next(inicio, fim);
+                numeros.Take(10).Skip(10);
             }
         }
         public static void VetorReverso(int[] numeros, int inicio, int fim, int tamanho)
@@ -19,6 +21,7 @@ namespace TrabalhoImplex
             for (int i = 0; i < tamanho; i++)
             {
                 numeros[i] = random.Next(inicio, fim);
+                numeros.Take(10).Skip(10);
             }
             Array.Reverse(numeros);
 
@@ -31,6 +34,7 @@ namespace TrabalhoImplex
             for (int i = 0; i < numeros.Length; i++)
             {
                 numeros[i] = random.Next(inicio, fim);
+                numeros.Take(10).Skip(10);
             }
             Array.Sort(numeros);
         }
@@ -42,6 +46,7 @@ namespace TrabalhoImplex
             for (int i = 0; i < numeros.Length; i++)
             {
                 numeros[i] = random.Next(inicio, fim);
+                numeros.Take(10).Skip(10);
             }
             Array.Sort(numeros);
         }
